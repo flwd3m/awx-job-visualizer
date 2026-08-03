@@ -1,0 +1,40 @@
+{
+  "name": "awx-job-visualizer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "bun run lint:code && bun run lint:types",
+    "lint:code": "biome check",
+    "lint:types": "bunx tsc --noEmit",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "anser": "^2.3.5",
+    "jotai": "^2.20.2",
+    "jotai-effect": "^2.4.1",
+    "next": "16.2.12",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
