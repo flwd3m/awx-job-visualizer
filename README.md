@@ -60,9 +60,18 @@ docker compose logs awx-job-visualizer
 | `AWX_TOKEN` | Recommended | AWX OAuth2 personal access token. Takes precedence over username/password authentication. |
 | `AWX_USERNAME` | Alternative | AWX username. Must be supplied together with `AWX_PASSWORD` when no token is configured. |
 | `AWX_PASSWORD` | Alternative | AWX password used with `AWX_USERNAME`. |
+| `BASE_PATH` | No | URL prefix where the application is served, such as `/tools/awx`. Defaults to `/`. |
 | `PORT` | No | Container listening port. Defaults to `3000`. |
 
 Do not prefix these variables with `NEXT_PUBLIC_`. They are server-side secrets and should remain in your container environment or secret manager.
+
+### Serve under a URL prefix
+
+Set `BASE_PATH` when a reverse proxy exposes the application below a path instead of at the domain root:
+
+```dotenv
+BASE_PATH=/tools/awx
+```
 
 ### Username and password authentication
 

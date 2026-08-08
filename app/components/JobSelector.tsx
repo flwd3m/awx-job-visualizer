@@ -28,7 +28,7 @@ const JobItem: FunctionComponent<{
   selected: boolean;
 }> = ({ job, selected }) => (
   <Link
-    href={`/?job=${job.id}`}
+    href={`?job=${job.id}`}
     className={`mb-1 block rounded-xl border px-3 py-3 transition ${
       selected
         ? "border-indigo-500/30 bg-indigo-500/10"
