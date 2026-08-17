@@ -171,6 +171,11 @@ const hostRowsAtom = atom((get) => {
     if (sort === "status") {
       const difference = statusOrder[left.status] - statusOrder[right.status];
       if (difference !== 0) return difference;
+      // Surface hosts that stopped or are progressing earlier in the task list first.
+      if (left.status === "failed" || left.status === "running") {
+        const taskCountDifference = left.results.size - right.results.size;
+        if (taskCountDifference !== 0) return taskCountDifference;
+      }
     }
     return left.name.localeCompare(right.name);
   });
