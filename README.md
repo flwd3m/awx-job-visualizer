@@ -4,6 +4,16 @@
 
 AWX Job Visualizer turns AWX playbook output into a compact execution matrix. See every host and task at a glance, follow running jobs live, and open individual results without digging through raw event output.
 
+## Screenshots
+
+### Execution matrix
+
+![AWX Job Visualizer execution matrix showing task results across eight hosts](docs/screenshots/execution-matrix.png)
+
+### Task result details
+
+![AWX Job Visualizer task result drawer showing status, duration, and output](docs/screenshots/task-result-details.png)
+
 ## Features
 
 - Playbook and workflow job support
