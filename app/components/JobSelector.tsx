@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { type FunctionComponent, useMemo, useState } from "react";
 import type { AwxJob, JobStatus } from "@/app/lib/data";
+import logo from "@/public/logo.png";
 
 const statusClass: Record<JobStatus, string> = {
   new: "bg-slate-500",
@@ -91,9 +93,13 @@ export const JobSelector: FunctionComponent<{
     <aside className="flex h-auto max-h-80 min-h-0 w-full flex-col border-b border-slate-800 bg-slate-950/80 lg:h-full lg:max-h-none lg:w-80 lg:shrink-0 lg:border-r lg:border-b-0">
       <div className="border-b border-slate-800 p-5">
         <div className="mb-5 flex items-center gap-3">
-          <div className="grid size-10 place-items-center rounded-xl bg-indigo-500 text-lg font-black text-white shadow-lg shadow-indigo-950/40">
-            A
-          </div>
+          <Image
+            src={logo}
+            alt=""
+            className="size-10 shrink-0"
+            width={40}
+            height={40}
+          />
           <div>
             <h1 className="font-bold tracking-tight text-slate-100">
               AWX Jobs

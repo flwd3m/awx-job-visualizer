@@ -1,4 +1,8 @@
-# AWX Job Visualizer
+<p align="center">
+  <img src="public/logo.png" alt="AWX Job Visualizer logo" width="128" height="128">
+</p>
+
+<h1 align="center">AWX Job Visualizer</h1>
 
 [![CI](https://github.com/flwd3m/awx-job-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/flwd3m/awx-job-visualizer/actions/workflows/ci.yml)
 
